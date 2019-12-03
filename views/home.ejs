@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Application</title>
+    <link rel="stylesheet" type="text/css" href="/css/home.css" />
+</head>
+
+<body>
+    <h1 id="title">MY HOME PAGE</h1>
+    <div class="info">
+        <span id="header">Welcome to your home page, my dear user !</span><br>
+        <ul>
+            <form action="/home" method="GET">
+                <li><button type="submit">/home</button> will redirect you to this page which is your <span id="highlight">home description</span> !</li>
+            </form>
+            <form action="/hello" method="POST">
+                <li><button type="submit">/hello/</button><input type="text" name="name" id="name" autofocus /> will redirect you to the <span id="highlight">hello page</span> with the <span id="highlight">name entered</span> !<br>You can display your
+                    <span id="highlight">metrics</span> once on this page !</li>
+            </form>
+        </ul>
+        Enjoy your time on this app ! <br><br><span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;color:turquoise">Bastien LE GUERN & Matthieu LELEU</span>
+
+    </div>
+    <footer>
+        <p><img style="margin-right:1em" src="img/ts.png"><img style="margin-right:1em" src="img/js.png"> 2019 ECE Paris - Web Technology NodeJS/ExpressJS/TypeScript<img style="margin-left: 1em;" src="img/logo.jpg"></p>
+
+    </footer>
+
+</body>
+
+</html>

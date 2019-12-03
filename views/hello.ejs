@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main Page</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/hello.css" />
+</head>
+
+<body>
+    <section>
+        <h1 id="title">Hello <span id="id"><%= name %> </span> ! Welcome to your page !
+        </h1>
+    </section>
+    <section>
+        <div id="section-header"><span id="section-header-title">Metrics</span></div>
+        <div id="filter">
+        <form id="printForm" method="POST">
+            <input name="idfilter" id="idfilter" type="text"/>
+            <input type="submit" value="" src="/img/search.png" id="search" width="30px" onclick="Button(this);">
+            <img src="/img/hide.png" id="hide" width="30px" >
+            <input type="submit" value="" src="/img/trash.png" id="trash" width="30px" onclick="Button(this);">
+            <input name="name" id="name" value="<%= name %>" type="hidden"/>
+        </form>  
+        </div>        
+        <div id="metrics"></div>
+    </section>
+    <section>
+        <div id="buttons-list"></div>
+        <form action="/home" method="GET">
+            <button id="homepage">
+                        <img src="/img/homepage.png" style="vertical-align:middle; margin-right: 1em;" width="30px"><span>Homepage</span>
+                         </button>
+        </form>
+
+        </div>
+    </section>
+
+    <script>
+        function Button(btn) {
+            var submitForm = btn.form;
+            if (btn.id=="search") {
+                submitForm.action = "/metrics/set"     
+            }
+            else if(btn.id == "trash"){
+                submitForm.action = "/metrics/delete"       
+            } else {
+                 submitForm.action = "/metrics/deleteAll"       
+            }
+        }
+
+        $(document).ready(function() {
+            $('#search').click((e) => {
+                $('form#printForm').submit();
+                $("#metrics").empty();               
+                e.preventDefault();
+                var txt = "";
+                $.getJSON("/metrics/getAll/<%= name %> ", {}, (data) => {
+                    const content = data.map(d => {
+                         txt += '<span id="txt-title">Timestamp:</span> ' + d.timestamp + ' <span id="txt-title">Value:</span> ' + d.value + '<br><br>';
+                    })
+                    html = $.parseHTML(txt);
+                    $('#metrics').append(html);
+                });
+            })
+            $('#hide').click((e) => {
+                $("#metrics").empty();
+                $("#idfilter").val("");
+            });
+            $.ajax({
+                url: '/metrics/delete',
+                type: "POST",
+                success: function(response){
+                    alert('evaluate response and show alert');
+                }
+            }); 
+        });
+    </script>
+</body>
+
+</html>

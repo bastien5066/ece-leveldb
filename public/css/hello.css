@@ -1,0 +1,130 @@
+body {
+    background-image: url('https://media.giphy.com/media/3tKhIPrQvT7XVqQKIm/giphy.gif');
+    background-attachment: fixed;
+    background-position-y: 30%;
+    background-size: cover;
+    margin: 10%;
+}
+
+img {
+    -webkit-filter: invert(100%);
+}
+
+#title {
+    color: white;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+}
+
+section {
+    background-image: linear-gradient(to right top, #0169b9, #035dab, #04519e, #044690, #033b83);
+    border: white solid;
+    margin-bottom: 5%;
+}
+
+#section-header {
+    padding: 2%;
+    text-align: center;
+    border-bottom: white 0.2em solid;
+}
+
+#section-header-title {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2em;
+}
+
+#id {
+    color: red;
+    font-style: italic;
+}
+
+#buttons-list {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+button {
+    display: inline-block;
+    padding: 1% 2% 1% 2%;
+    min-width: 25%;
+    background-color: blue;
+    color: white;
+    font-size: 1.2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+}
+
+#show-metrics:hover {
+    background-color: green;
+}
+
+#hide-metrics:hover {
+    background-color: red;
+}
+
+#metrics {
+    color: white;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2em;
+    padding: 2% 0 2% 0;
+}
+
+#txt-title {
+    color: turquoise;
+    margin: 1% 1% 1% 1%;
+}
+
+#homepage {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    display: block;
+    text-align: center;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#filter {
+    text-align: center;
+    padding-top: 1em;
+}
+
+#filter input {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+#hide {
+    vertical-align: middle;
+    margin-left: 1em
+}
+
+#trash {
+    background: url("../img/trash.png");
+    border: none;
+    vertical-align: middle;
+    background-size: 30px 30px;
+}
+
+#search {
+    background: url("../img/search.png");
+    border: none;
+    vertical-align: middle;
+    background-size: 30px 30px;
+}
+
+#printForm input {
+    margin-left: 1em
+}
+
+#search:hover,
+#trash:hover,
+#hide:hover {
+    cursor: pointer;
+}
