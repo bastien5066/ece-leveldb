@@ -67,13 +67,6 @@
                 $("#metrics").empty();
                 $("#idfilter").val("");
             });
-            $.ajax({
-                url: '/metrics/delete',
-                type: "POST",
-                success: function(response){
-                    alert('evaluate response and show alert');
-                }
-            }); 
         });
     </script>
 </body>

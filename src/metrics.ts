@@ -42,9 +42,13 @@ export class MetricsHandler {
     this.db.createReadStream()
       .on('data', function (data) {
         let id = data.key.split(':')[1]
+        console.log(key)
+        console.log(id)
         if (id == key) {
           let timestamp: string = data.key.split(':')[2]
           let oneMetric: Metric = new Metric(timestamp, data.value)
+          console.log(filter)
+          console.log(timestamp)
           if (filter === "") {
             metrics.push(oneMetric)
           } else {

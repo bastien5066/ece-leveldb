@@ -1,5 +1,5 @@
-2019/12/03-18:56:42.341 4a1c Recovering log #60
-2019/12/03-18:56:42.341 4a1c Level-0 table #63: started
-2019/12/03-18:56:42.346 4a1c Level-0 table #63: 200 bytes OK
-2019/12/03-18:56:42.352 4a1c Delete type=0 #60
-2019/12/03-18:56:42.352 4a1c Delete type=3 #58
+2019/12/06-12:44:18.746 52ac Recovering log #79
+2019/12/06-12:44:18.747 52ac Level-0 table #81: started
+2019/12/06-12:44:18.752 52ac Level-0 table #81: 203 bytes OK
+2019/12/06-12:44:18.758 52ac Delete type=0 #79
+2019/12/06-12:44:18.758 52ac Delete type=3 #77
